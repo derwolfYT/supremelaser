@@ -1,6 +1,6 @@
 package com.ninjawarrior1337.supremelaser;
 
-import buildcraft.silicon.BlockLaser;
+import buildcraft.BuildCraftSilicon;
 import com.ninjawarrior1337.supremelaser.blocks.CreativeLaser;
 import com.ninjawarrior1337.supremelaser.proxy.CommonProxy;
 import cpw.mods.fml.common.Mod;
@@ -10,6 +10,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 /**
@@ -38,7 +39,7 @@ public class supremelaser
     public void init(FMLInitializationEvent e)
     {
         proxy.init(e);
-        GameRegistry.addShapelessRecipe(new ItemStack(new CreativeLaser(), 1), new Object[]{new ItemStack(new BlockLaser())});
+        GameRegistry.addShapelessRecipe(new ItemStack(supremelaser.CreativeLaser, 1), new Object[]{new ItemStack(BuildCraftSilicon.laserBlock), new ItemStack(Items.nether_star)});
     }
 
     @Mod.EventHandler
