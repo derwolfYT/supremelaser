@@ -10,7 +10,7 @@ public class TileCreativeLaser extends TileLaser
 {
     public TileCreativeLaser()
     {
-        this.setBattery(new RFBattery(2147483647, 2147483647, 0));
+        this.setBattery(new RFBattery(100000000, 2147483647, 0));
     }
 
     public int get()
